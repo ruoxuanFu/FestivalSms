@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_choose_msg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.quaie.wms.myapplication.ChooseMsgActivity">
+
+    <com.quaie.wms.myapplication.View.TitleBar
+        android:id="@+id/id_tb_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp">
+
+    </com.quaie.wms.myapplication.View.TitleBar>
+
+    <ListView
+        android:id="@+id/id_lv_msgs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_tb_title"
+        android:divider="@drawable/wave"
+        android:dividerHeight="5dp">
+
+    </ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/id_fab_toSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:src="@drawable/ic_send_black_24dp"
+        app:backgroundTint="@color/main_color"
+        app:borderWidth="0dp" />
+
+</RelativeLayout>

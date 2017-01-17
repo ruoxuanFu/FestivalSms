@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_send_msg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.quaie.wms.myapplication.SendMsgActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.quaie.wms.myapplication.View.TitleBar
+            android:id="@+id/id_sma_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp">
+
+        </com.quaie.wms.myapplication.View.TitleBar>
+
+        <EditText
+            android:id="@+id/id_et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/editbg"
+            android:gravity="left"
+            android:hint="请送上你最好的祝福吧..."
+            android:maxHeight="220dp"
+            android:padding="5dp"
+            android:textColor="#777"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/id_bt_clear"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/editbg"
+                android:text="重绘祝福" />
+
+            <Button
+                android:id="@+id/id_bt_readd"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/editbg"
+                android:text="重新添加联系人" />
+
+            <Button
+                android:id="@+id/id_bt_addcontacts"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/editbg"
+                android:text="添加联系人" />
+
+        </LinearLayout>
+
+        <com.quaie.wms.myapplication.View.FlowLayout
+            android:id="@+id/id_fl_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.quaie.wms.myapplication.View.FlowLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/id_fab_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:src="@drawable/ic_edit_over"
+        app:backgroundTint="@color/main_color"
+        app:borderWidth="0dp" />
+
+    <FrameLayout
+        android:id="@+id/id_fl_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DF000000"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <com.quaie.wms.myapplication.View.YuanXingDaiJinDuProgress
+                android:id="@+id/id_Rp_progressbar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                app:Rprogress_reach_color="@color/Rprogress_reach_color"
+                app:Rprogress_reach_height="8dp"
+                app:Rprogress_text_color="#fff"
+                app:Rprogress_text_size="12sp"
+                app:Rprogress_unreach_color="@color/Rprogress_unreach_color"
+                app:Rprogress_unreach_height="5dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+</FrameLayout>
